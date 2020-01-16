@@ -1,10 +1,14 @@
 # 电子科技大学计算机学院实验报告 LaTeX 模板
 
-本模板基于[heywrcoding/UESTC_Lab_Report_LaTeX_Template](https://github.com/heywrcoding/UESTC_Lab_Report_LaTeX_Template/)，参考[标准实验报告_模板.doc]()修改，修改之处见[文末](#修改)。
+本模板基于[heywrcoding/UESTC_Lab_Report_LaTeX_Template](https://github.com/heywrcoding/UESTC_Lab_Report_LaTeX_Template/)，参考[标准实验报告_模板.doc]修改，修改之处见[文末](#修改)。
 
 [原项目的 README](https://github.com/heywrcoding/UESTC_Lab_Report_LaTeX_Template/blob/master/README.zh-CN.md)
 
-[LaTeX 模板]() [预览 pdf]()
+[LaTeX 模板] [预览 pdf]
+
+[LaTeX 模板]:(https://github.com/lyh543/UESTC_LaTeX_Template/blob/master/Lab_Report/lab_report(zh-cn)/lab_report(zh_cn).tex)
+[标准实验报告_模板.doc]:(https://github.com/lyh543/UESTC_LaTeX_Template/blob/master/Lab_Report/标准实验报告_模板.doc)
+[预览 pdf]:(https://github.com/lyh543/UESTC_LaTeX_Template/blob/master/Lab_Report/lab_report(zh-cn)/lab_report(zh_cn).pdf)
 
 ## 简易的使用手册
 

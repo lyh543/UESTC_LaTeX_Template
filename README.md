@@ -4,6 +4,9 @@
 
 目前收集了：
 
-* [实验报告模板](https://github.com/lyh543/UESTC_LaTeX_Template/Lab_Report)，基于[heywrcoding/UESTC_Lab_Report_LaTeX_Template](https://github.com/heywrcoding/UESTC_Lab_Report_LaTeX_Template/)修改。
+* [电子科技大学计算机学院实验报告模板](https://github.com/lyh543/UESTC_LaTeX_Template/tree/master/Lab_Report)，基于 [heywrcoding/UESTC_Lab_Report_LaTeX_Template](https://github.com/heywrcoding/UESTC_Lab_Report_LaTeX_Template/) （信软学院）项目修改。
+
+目前未收集：
+
 * 课程论文模板
 * 毕业论文模板
