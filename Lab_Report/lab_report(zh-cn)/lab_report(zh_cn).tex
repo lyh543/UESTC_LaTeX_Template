@@ -1,0 +1,355 @@
+%!Mode:: "TeX:UTF-8"
+\documentclass[a4paper,11pt,UTF8,AutoFakeBold]{ctexart}
+
+\usepackage{indentfirst} %缩进
+\usepackage{xeCJK}    %使用系统字体
+\usepackage{bm}       %粗体
+\usepackage{fancyhdr} %自定义页眉页脚
+\pagestyle{empty}                   %不设置页眉页脚
+\usepackage{amsmath, amsthm, amssymb, amsfonts} %数学公式
+\usepackage[a4paper,left=3cm,right=3cm,top=3.5cm,bottom=3.5cm]{geometry}
+\usepackage{booktabs} %插入表格
+\usepackage[section]{placeins} %避免浮动
+\usepackage{listings} %插入代码
+\usepackage{ctex}     %中文宏包
+\usepackage[svgnames, table]{xcolor} %彩色表格
+\usepackage{algorithm}          %伪代码
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{algorithm,algpseudocode,float}
+\usepackage{lipsum}
+\usepackage{enumitem}           %调整列举环境
+\usepackage{url}
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Mapping=tex-text} %如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
+
+\usepackage{graphicx}
+\graphicspath{{imgs/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 缩进及行间距
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{22bp} %重新定义缩进长度
+\linespread{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 图的标题行间距设置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bottomcaption}{%
+\setlength{\abovecaptionskip}{6bp}%
+\setlength{\belowcaptionskip}{6bp}%
+\caption}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 字体定义
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setmainfont{Times New Roman}  %默认英文字体.serif是有衬线字体sans serif无衬线字体
+\setmonofont{Consolas}
+\setCJKmainfont[ItalicFont={楷体}, BoldFont={黑体}]{宋体}%衬线字体 缺省中文字体为
+\setCJKsansfont{黑体}
+\punctstyle{hangmobanjiao}
+%-----------------------xeCJK下设置中文字体------------------------------%
+\setCJKfamilyfont{song}{SimSun}                             %宋体 song
+\newcommand{\song}{\CJKfamily{song}}
+\setCJKfamilyfont{fs}{FangSong}                      %仿宋  fs
+\newcommand{\fs}{\CJKfamily{fs}} 
+\let\kaishu\relax                                    %重定义楷体，打开假粗体
+\newCJKfontfamily\kaishu{KaiTi}[AutoFakeBold] 
+%\setCJKfamilyfont{ktgb}{KaiTi_GB2312}                      %楷体 GB2312
+%\newcommand{\ktgb}{\CJKfamily{ktgb}}
+\setCJKfamilyfont{yh}{Microsoft YaHei}                    %微软雅黑 yh
+\newcommand{\yh}{\CJKfamily{yh}}
+\setCJKfamilyfont{hei}{SimHei}                              %黑体  hei
+\newcommand{\hei}{\CJKfamily{hei}}
+\setCJKfamilyfont{hwxk}{STXingkai}                                %华文行楷  hwxk
+\newcommand{\hwxk}{\CJKfamily{hwxk}}
+\setCJKfamilyfont{fzshu}{FZShuTi}                                    %方正舒体 fzshu
+\newcommand{\fzshu}{\CJKfamily{fzshu}}
+%------------------------------设置字体大小------------------------%
+\newcommand{\chuhao}{\fontsize{42bp}{63bp}\selectfont}     %初号， 1.5倍行距
+\newcommand{\xiaochuhao}{\fontsize{36bp}{36bp}\selectfont} %小初号，单倍行距
+\newcommand{\yihao}{\fontsize{26bp}{39bp}\selectfont}        % 一号, 1.5 倍行距
+\newcommand{\erhao}{\fontsize{22bp}{33bp}\selectfont}        % 二号, 1.5倍行距
+\newcommand{\xiaoerhao}{\fontsize{18bp}{18bp}\selectfont}       % 小二, 单倍行距
+\newcommand{\sanhao}{\fontsize{16bp}{24bp}\selectfont}       % 三号, 1.5倍行距
+\newcommand{\xiaosanhao}{\fontsize{15bp}{22bp}\selectfont}      % 小三, 1.5倍行距
+\newcommand{\sihao}{\fontsize{14bp}{21bp}\selectfont}        % 四号, 1.5 倍行距
+\newcommand{\banxiaosi}{\fontsize{13bp}{20bp}\selectfont}  % 半小四, 20pt行距
+\newcommand{\xiaosihao}{\fontsize{12bp}{20bp}\selectfont}       % 小四, 20pt行距
+\newcommand{\dawuhao}{\fontsize{11bp}{11bp}\selectfont}      % 大五号, 单倍行距
+\newcommand{\wuhao}{\fontsize{10.5bp}{10.5bp}\selectfont}   % 五号, 单倍行距
+\newcommand{\xiaowuhao}{\fontsize{9bp}{9bp}\selectfont}   %小五号，单倍行距
+%------------------------------重定义normalize------------------------%
+\renewcommand{\normalsize}{\fontsize{12bp}{20bp}\selectfont}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 图题字体大小相同
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{caption}
+\captionsetup{font={footnotesize}}   % footnotesize = 9bp
+\captionsetup[lstlisting]{font={footnotesize}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 重定义枚举编号为 1),2)...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\labelenumi}{\theenumi）}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 重定义section标题
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CTEXsetup[format={\song\bfseries\zihao{4}},number={\chinese{section}},name={,、~},aftername={},indent={0bp},beforeskip={6bp},afterskip={6bp},format+={\flushleft}]{section}
+\CTEXsetup[format={\Large\bfseries\song\zihao{5}},name={（,）},number={\chinese{subsection}},aftername={},indent={22bp},beforeskip={6bp},afterskip={6bp}]{subsection}
+\CTEXsetup[number={\chinese{section}},name={附录, ~~ }]{appendix}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 标题名称中文化
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\figurename{\hei 图}
+\renewcommand\tablename{\hei 表}
+\renewcommand\lstlistingname{\hei 代码}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+\newtheorem{define}{定义}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 列表设置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlist[enumerate,1]{itemindent=22bp,listparindent=\parindent,itemsep=0mm,partopsep=.7mm,parsep=0ex,labelsep=1.5mm,topsep=0.7mm}
+\setlist[enumerate,2]{label=\alph*),leftmargin=1.5em}  %二级item设置
+%\setitemize{itemindent=38bp,leftmargin=0bp,itemsep=-0.4ex,listparindent=26bp,partopsep=0bp,parsep=0.5ex,topsep=-0.25ex}
+%\setdescription{itemindent=38bp,leftmargin=0bp,itemsep=-0.4ex,listparindent=26bp,partopsep=0bp,parsep=0.5ex,topsep=-0.25ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 代码设置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{
+ columns=fixed,
+ numbers=left,                                        % 在左侧显示行号
+ numberstyle=\tiny\color{gray},                       % 设定行号格式
+ frame=single,                                        % 单线背景边框
+ breaklines=true,                                     % 设定LaTeX对过长的代码行进行自动换行
+ keywordstyle=\color[RGB]{40,40,255},                 % 设定关键字颜色
+ numberstyle=\footnotesize\color{darkgray},
+ commentstyle=\it\color[RGB]{0,96,96},                % 设置代码注释的格式
+ stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
+ showstringspaces=false,                              % 不显示字符串中的空格
+ language=java,                                        % 设置语言
+ basicstyle=\linespread{1.0}\xiaowuhao\ttfamily,                      % 字体字号
+ %lineskip=10bp,
+ %baselinestretch=1,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 伪代码分页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand{\ALG@name}{算法}
+\newenvironment{breakablealgorithm}
+  {% \begin{breakablealgorithm}
+   \begin{center}
+     \refstepcounter{algorithm}% New algorithm
+     \hrule height.8bp depth0bp \kern2bp% \@fs@pre for \@fs@ruled
+     \renewcommand{\caption}[2][\relax]{% Make a new \caption
+       {\raggedright\textbf{\ALG@name~\thealgorithm} ##2\par}%
+       \ifx\relax##1\relax % #1 is \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##2}%
+       \else % #1 is not \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##1}%
+       \fi
+       \kern2bp\hrule\kern2bp
+     }
+  }{% \end{breakablealgorithm}
+     \kern2bp\hrule\relax% \@fs@post for \@fs@ruled
+   \end{center}
+  }
+\makeatother
+
+
+
+\begin{document}
+\xiaosihao\kaishu
+
+\begin{titlepage}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\textwidth]{uestc}
+\end{figure}
+
+\center{\xiaochuhao{\kaishu{\bfseries 计算机专业类课程}}}
+\vspace{1.5cm}
+\center{\fontsize{48bp}{52bp}{\song{\bfseries 实\\验\\报\\告}}}
+
+\vspace{1.5cm}
+
+\begin{center}
+\begin{large}
+\begin{tabular}{rl}
+\xiaoerhao{\bfseries\hei{课程名称：}}& \xiaoerhao{\bfseries\hei{X~X~X}}\\
+\\
+\xiaoerhao{\bfseries\hei{学院专业：}}& \xiaoerhao{\bfseries\hei{计算机科学与工程学院}}\\
+\\
+\xiaoerhao{\bfseries\hei{学\qquad 号：}}& \xiaoerhao{\bfseries\hei{201622xxxxxxx}}\\
+\\
+\xiaoerhao{\bfseries\hei{姓\qquad 名：}}& \xiaoerhao{\bfseries\hei{X~X~X}}\\
+\\
+\xiaoerhao{\bfseries\hei{指导教师：}}& \xiaoerhao{\bfseries\hei{X~X~X}}\\
+\\
+\xiaoerhao{\bfseries\hei{实验教师：}}& \xiaoerhao{\bfseries\hei{X~X~X}}\\
+\\
+\xiaoerhao{\bfseries\hei{日\qquad 期：}}& \xiaoerhao{\bfseries\hei{X 年 X 月 X 日}}\\
+\end{tabular}
+\end{large}
+\end{center}
+\end{titlepage}
+
+\centerline{\\[10bp]\erhao{\fzshu{\bfseries 电 ~子 ~科~ 技~ 大~ 学}}}
+
+\centerline{\\[20bp]\yihao{\hei{\bfseries 实  ~~~ 验  ~~~ 报  ~~~ 告}}}
+
+\section{实验室名称：}
+电子科技大学清水河校区主楼A2-412
+\section{实验项目名称：}
+LaTeX 的应用
+
+\section{实验原理：}
+
+(这部分需要详细填写实验原理。可以参考实验指导书和查阅相关的资料，可以有更能说明问题的图表。原则上字数不少于300字。)\\
+
+
+\section{实验目的：}
+
+(这部分要提出预期目标, 需要详细说明)\\
+
+\section{实验内容：}
+
+(这部分需要详细填写实验内容。可以参考实验指导书。需要分清楚的是哪些是属于原理的，哪些才是属于内容。原则上字数不少于200字。)\\
+
+\section{实验器材（设备、元器件）：}
+
+(描述实验用到软硬件，例如设备、操作系统、用到的软件等等)\\
+
+\section{实验步骤：}
+
+\subsection{问题描述}
+\subsection{算法分析与概要设计}
+包括：输入；输出；输入转换为输出的算法描述（流程图+文字解释算法设计思想）
+\subsection{核心算法的详细设计与实现}
+（详细设计一般用流程图+文字解释说清楚算法设计步骤，对于比较复杂的算法，可以粘贴核心代码，但不能有大量代码在这里出现）
+
+
+\section{实验数据及结果分析：}
+
+自行填写。每个实验项目的格式范例：
+\begin{enumerate}
+  \item 关键流程分析
+  \begin{enumerate}
+  	\item 第一步
+  	\begin{enumerate}
+  		\item 第一小点
+  		\item 第二小点
+  		\item 第三小点
+  		\begin{itemize}
+  			\item 1
+  			\item 2
+  		\end{itemize}
+  	\end{enumerate}
+  	\item 第二步
+  	\item 第三步
+  \end{enumerate}
+  \item 实验结果 \\ 文字描述或者截图（所作的图）。必须有截图，截图数量不少于2幅。
+  \item 结果分析 \\ 对每一个结果，必须有相应分析，如解释图表反映的内涵、缘由，是否达到预期目标，是否可改进等等。\\
+\end{enumerate}
+
+
+
+\section{总结及心得体会：}
+
+(自行填写。必须写点什么，不能写“无”)\\
+
+\section{对本实验过程及方法、手段的改进建议及展望：}
+
+(自行填写。必须写点什么，不能写“无”)
+
+（注意：八，九部分能反映出实验的态度、方法和效果，应重点阐述，字数勿少，独立完成，勿参考其他报告，避免雷同）
+
+\vspace{4cm}
+\begin{flushright}
+\begin{tabular}{lc}
+\sihao{\hei{报告评分：}}& \sihao{\song{X~X~X}}\\
+\sihao{\hei{指导教师签字：}}& \sihao{\song{X~X~X}}\\
+\end{tabular}
+\end{flushright}
+
+\begin{appendix}
+
+\section{代码示例}
+
+\begin{lstlisting}[caption={一段C代码},captionpos=b]
+#include <stdio.h>
+int main (int argc, char *argv[]){
+  printf("Hello world!");
+}
+\end{lstlisting}
+
+\section{表格示例}
+\begin{table}[!h!tbp]
+\caption{一个简单的表格}\label{tab1}
+  \centering
+  \begin{tabular}{|l|c|c|}
+	\hline
+	功能          &WEB         &APP         \\ \hline
+	注册          &$\surd$     &$\surd$     \\ \hline
+	登录          &$\surd$     &$\surd$     \\ \hline
+	推送          &$\times$    &$\surd$     \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h!tbp]
+\caption{自定义表格}\label{tab2}
+  \centering
+\begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}}lcc}
+    \toprule
+    功能          &WEB         &APP         \\
+    \midrule
+    注册          &$\surd$     &$\surd$     \\
+    登录          &$\surd$     &$\surd$     \\
+    推送          &$\times$    &$\surd$     \\
+    \bottomrule
+\end{tabular*}
+\end{table}
+
+\section{伪代码示例}
+
+\begin{algorithm}
+\caption{某个算法}
+\begin{algorithmic}[1]  %每行显示行号
+\Require 某个输入
+\Ensure 某个输出
+\Function {函数名} {参数列表}
+    \State 某个变量  $\gets$ 某个变量
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\section{字体示例}
+\hei{黑体}
+\hwxk{华文行楷}
+
+\section{图片示例}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{logo}
+\bottomcaption{\xiaowuhao{电子科技大学}}
+\end{figure}
+
+\end{appendix}
+
+\end{document}
