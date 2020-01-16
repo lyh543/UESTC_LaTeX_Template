@@ -6,9 +6,9 @@
 
 [LaTeX 模板] [预览 pdf]
 
-[LaTeX 模板]:(https://github.com/lyh543/UESTC_LaTeX_Template/blob/master/Lab_Report/lab_report(zh-cn)/lab_report(zh_cn).tex)
-[标准实验报告_模板.doc]:(https://github.com/lyh543/UESTC_LaTeX_Template/blob/master/Lab_Report/标准实验报告_模板.doc)
-[预览 pdf]:(https://github.com/lyh543/UESTC_LaTeX_Template/blob/master/Lab_Report/lab_report(zh-cn)/lab_report(zh_cn).pdf)
+[LaTeX 模板]: https://github.com/lyh543/UESTC_LaTeX_Template/blob/master/Lab_Report/lab_report(zh-cn)/lab_report(zh_cn).tex
+[标准实验报告_模板.doc]: https://github.com/lyh543/UESTC_LaTeX_Template/blob/master/Lab_Report/标准实验报告_模板.doc
+[预览 pdf]: https://github.com/lyh543/UESTC_LaTeX_Template/blob/master/Lab_Report/lab_report(zh-cn)/lab_report(zh_cn).pdf
 
 ## 简易的使用手册
 
