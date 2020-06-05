@@ -30,6 +30,11 @@
 
 \RequirePackage{array}
 \RequirePackage{booktabs}
+\setlength{\heavyrulewidth}{0.5pt}
+\setlength{\lightrulewidth}{0.5pt}
+\setlength{\arrayrulewidth}{0.5pt}
+\setlength{\cmidrulewidth}{0.5pt}
+
 \RequirePackage{setspace}
 \RequirePackage{multirow}
 \RequirePackage[tbtags]{amsmath}
@@ -65,7 +70,8 @@
 \fi
 \fi
 
-\DeclareMathAlphabet{\mathbf}{\eu@enc}{\eu@mathrm}{bx}{it}
+\DeclareMathAlphabet{\mathbf}{\eu@enc}{\eu@mathrm}{\bfdefault}{it}
+\DeclareMathAlphabet{\mathbd}{\eu@enc}{\eu@mathrm}{\bfdefault}{n}
 \newcommand{\bm}{\mathbf}
 
 \RequirePackage{zhnumber}
@@ -90,7 +96,6 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{titlesec}
 \RequirePackage{appendix}
-\RequirePackage{setspace}
 \RequirePackage{cite}
 \RequirePackage[normalem]{ulem}
 \RequirePackage{enumitem}
@@ -112,6 +117,8 @@
 
 \urlstyle{rm}
 \raggedbottom
+
+% \AtBeginDocument{\pretocmd{\ref}{~}{}{}\apptocmd{\ref}{}{}{}}
 
 \newcommand{\thesistablelist}{
   \listoftables
@@ -140,23 +147,20 @@
 
 \captionsetup{format=hang}
 \captionsetup{width=\textwidth - 42pt}
-\captionsetup[figure]{aboveskip=6pt,belowskip=0pt}
-\captionsetup[table]{belowskip=6pt}
+\captionsetup[figure]{aboveskip=6pt, belowskip=0pt}
+\captionsetup[table]{aboveskip=9pt, belowskip=0pt}
 
-\setlength{\subfigcapskip}{0pt}
 \setlength{\intextsep}{9pt}
 
-\AtBeginEnvironment{figure}{
-  \def\@floatboxreset{\centering}
+\AtBeginEnvironment{figure}{%
+  \def\@floatboxreset{\centering}%
 }
 
-\AtBeginEnvironment{table}{
-  \def\@floatboxreset{\centering}
+\AtBeginEnvironment{table}{%
+  \def\@floatboxreset{\centering}%
 }
 
 \AtBeginEnvironment{tabular}{\small}
-
-\renewcommand{\p@subfigure}{\arabic{chapter}-\arabic{figure}}
 
 \newcommand{\chinesecolon}{\char"FF1A}
 \newcommand{\chinesespace}{\char"3000}
@@ -257,24 +261,20 @@
   \chapter*{\heiti{摘\chinesespace 要}}
   \thispagestyle{fancy}
   \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 摘要}
-}%{
-%  \checkoddpage
-%  \ifoddpage
-%      \blankpage
-%    \else
-%      \newpage
-%    \fi
-%}
+}{
+  \checkoddpage
+  \ifoddpage
+     \blankpage
+    \else
+      \newpage
+    \fi
+}
 
 \newcommand{\chinesekeyword}[1]{
   \vspace{\baselineskip}
   \noindent
-    \begin{minipage}[t]{48pt}
-      \noindent\textbf{关键词\chinesecolon}
-    \end{minipage}
-    \begin{minipage}[t]{\linewidth - 48pt}
-      #1
-    \end{minipage}
+  \parbox[t]{48pt}{\textbf{关键词\chinesecolon}}%
+  \parbox[t]{\linewidth - 48.06pt}{#1}
 }
 
 \newenvironment{englishabstract}{
@@ -299,13 +299,9 @@
 
 \newcommand{\englishkeyword}[1]{
   \vspace{\baselineskip}
-  \noindent\begin{minipage}[t]{2.1cm}
-      \noindent\textbf{Keywords:}
-    \end{minipage}
-    \begin{minipage}[t]{
-      \linewidth - 2.1cm}
-        #1
-    \end{minipage}
+  \noindent
+  \parbox[t]{2.1cm}{\textbf{Keywords:}}%
+  \parbox[t]{\linewidth - 2.106cm}{#1}
 }
 
 \AddEverypageHook{\addtocontents{toc}{
@@ -389,6 +385,22 @@
   \renewcommand{\thestudentnumber}{#1}
 }
 
+\newcommand{\thedateoral}{}
+\newcommand{\thedatesubmit}{}
+\newcommand{\thedateconfer}{年\chinesespace 月}
+
+\newcommand{\setdate}[2][]{ 
+\ifthenelse{\equal{#1}{oral}}{
+  \renewcommand{\thedateoral}{#2}
+}{}
+\ifthenelse{\equal{#1}{submit}}{
+  \renewcommand{\thedatesubmit}{#2}
+}{}
+\ifthenelse{\equal{#1}{confer}}{
+  \renewcommand{\thedateconfer}{#2}
+}{}
+}
+
 \renewcommand{\strong}{\heiti}
 \DeclareOption{english} {
   \newcommand{\englishbook}{}
@@ -403,15 +415,51 @@
 
 \DeclareOption{bachelor}{
   \def\chinesedegreename{本科}
-%  \def\englishdegreename{Bachelor}
-%  \def\chinesebooktitle{文化与思维~结课论文}
-%  \def\englishbooktitle{Bachelor Thesis}
+  \def\englishdegreename{Bachelor}
+  \def\chinesebooktitle{学士学位论文}
+  \def\englishbooktitle{Bachelor Thesis}
   \def\display@englishheader{Bachelor Thesis of University of
     Electronic Science and Technology of China}
 }
 
 \newcommand{\ifbachelor}[2]{
   \ifthenelse{\equal{\englishdegreename}{Bachelor}}{#1}{#2}
+}
+
+\DeclareOption{master}{
+  \def\chinesedegreename{硕士}
+  \def\englishdegreename{Master}
+  \def\chinesebooktitle{硕士学位论文}
+  \def\englishbooktitle{Master Thesis}
+  \def\display@englishheader{Master Thesis of University of
+    Electronic Science and Technology of China}
+}
+
+\DeclareOption{promaster}{
+  \def\chinesedegreename{专业硕士}
+  \def\englishdegreename{Professional Master}
+  \def\chinesebooktitle{专业学位硕士学位论文}
+  \def\englishbooktitle{Master Thesis for Professional Degree}
+  \def\display@englishheader{Professional Master Thesis of University 
+    of Electronic Science and Technology of China}
+}
+
+\DeclareOption{doctor}{
+  \def\chinesedegreename{博士}
+  \def\englishdegreename{Doctor}
+  \def\chinesebooktitle{博士学位论文}
+  \def\englishbooktitle{Doctoral Dissertation}
+  \def\display@englishheader{Doctoral Dissertation of University of
+    Electronic Science and Technology of China}
+}
+
+\DeclareOption{engdoctor}{
+  \def\chinesedegreename{工程博士}
+  \def\englishdegreename{Engineering Doctor}
+  \def\chinesebooktitle{工程博士学位论文}
+  \def\englishbooktitle{Engineering Doctoral Dissertation}
+  \def\display@englishheader{Engineering Doctoral Dissertation of
+    University of Electronic Science and Technology of China}
 }
 
 \ExecuteOptions{master}
@@ -534,7 +582,7 @@
     \printglossary[style=long-uestc, title={\protect\centering Glossary}, nonumberlist, nogroupskip]
   }
 }
-\makeglossaries
+% \makeglossaries
 
 \newcommand{\makecover}{
 \thispagestyle{empty}
@@ -566,7 +614,7 @@
   \end{tabular} \\[\baselineskip]
   \begin{tabular}{>{\heiti\fontsize{16pt}{16pt}\selectfont}l
       >{\centering\arraybackslash\heiti\fontsize{16pt}{16pt}\selectfont}
-      p{3.77in}p{20pt}}
+      p{3.77in}p{15pt}}
     学科专业 & \zh@themajor &\\
     \cline{2-2}
     学\chinesespace\chinesespace 号 & \thestudentnumber & \\
@@ -636,15 +684,15 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[12bp]
       >{\fontsize{12pt}{12pt}\selectfont}l
       >{\centering\arraybackslash\fontsize{16pt}{16pt}\heiti\selectfont}
       p{2.0in}}
-      提交论文日期 &  &
-      论文答辩日期 & \\
+      提交论文日期 & \thedatesubmit &
+      论文答辩日期 & \thedateoral \\
     \cline{2-2}
     \cline{4-4}
   \end{tabular} \\
   \begin{tabular}{>{\fontsize{12pt}{12pt}\selectfont}l
       >{\centering\arraybackslash\fontsize{16pt}{16pt}\heiti\selectfont}
       p{3.97in}}
-      学位授予单位和日期 & 电子科技大学\chinesespace 年\chinesespace 月 \\
+      学位授予单位和日期 & 电子科技大学\chinesespace{} \thedateconfer \\
     \cline{2-2}
   \end{tabular} \\
   \begin{tabular}{>{\fontsize{12pt}{12pt}\selectfont}l
@@ -713,7 +761,7 @@ School: & \en@theschool \\
   \noindent\begin{center}
   \fontsize{18pt}{20pt}\selectfont\heiti 独创性声明
   \end{center}
-    \par{\fontsize{14pt}{16pt}\selectfont\noindent\null\hspace{28pt}
+    \par{\fontsize{14pt}{16pt}\selectfont\noindent\null\hspace{28pt}%
     本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。%
     据我所知，除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，%
     也不包含为获得电子科技大学或其它教育机构的学位或证书而使用过的材料。%
@@ -745,7 +793,7 @@ School: & \en@theschool \\
 \newcommand{\standardhead}{
   \fancyhf{}
   \ifchinesebook{
-    \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont \chinesebooktitle}
+    \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont 电子科技大学\chinesebooktitle}
     \fancyhead[CO]{\fontsize{10.5pt}{12.6pt}\selectfont\leftmark}
   }{
     \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont\nouppercase\display@englishheader}
@@ -789,24 +837,18 @@ School: & \en@theschool \\
 }
 
 \newcommand{\thesischapterexordium}{
-%  \checkoddpage
-%  \ifoddpage
-%      \blankpage
-%    \else
-%      \newpage
-%  \fi
-%    \newpage
+  \checkoddpage
+  \ifoddpage
+      \blankpage
+    \else
+      \newpage
+  \fi
+    \newpage
   \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
   \standardhead
   \pagenumbering{arabic}
   \setcounter{page}{1}
-  \ifchinesebook{
-    \chapter{绪\hspace{6pt}论}
-    \chaptermark{绪论}
-  }{
-    \chapter{Introduction}
-    \chaptermark{Introduction}
-  }
+
 }
 
 %\renewcommand*{\l@chapter}{\@dottedtocline{1}{1.5em}{2.3em}}
@@ -814,6 +856,7 @@ School: & \en@theschool \\
 \newcommand{\thesisappendix}{
   \newpage
   \appendix
+  \interlinepenalty=0
   \ifchinesebook{}{\addtocontents{toc}{\protect\addtolength{\cftchapnumwidth}{12pt}}}
   \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
   \titleformat{\chapter}[block]
@@ -841,6 +884,7 @@ School: & \en@theschool \\
 \newcommand{\thesissingleappendix}{
   \newpage
   \appendix
+  \interlinepenalty=0
   \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
   \titleformat{\chapter}[block]
     {\centering\fontsize{15pt}{15pt}\selectfont\strong\thispagestyle{fancy}}{附\hspace{12pt}录}{7.5pt}{}
@@ -883,6 +927,7 @@ School: & \en@theschool \\
 }
 
 \newcommand{\thesistranslationoriginal}{
+  \interlinepenalty=0
   \chapter*{\translation@originaltitle}
   \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
   \renewcommand\thesection{\arabic{section}}
@@ -899,6 +944,7 @@ School: & \en@theschool \\
 }
 
 \newcommand{\thesistranslationchinese}{
+  \interlinepenalty=0
   \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
   \chapter*{\translation@chinesetitle}
   \renewcommand\thesection{\arabic{section}}
@@ -925,7 +971,7 @@ School: & \en@theschool \\
 \renewcommand{\bibname}{\thesisbibname}
 \renewcommand{\@biblabel}[1]{[#1]\hfill}
 
-\newenvironment{thesisbibliography}{
+\newenvironment{thesisthebibliography}{
   \begin{thebibliography}{lo}
     \interlinepenalty=10000
     \begin{spacing}{1.667}
@@ -961,18 +1007,26 @@ School: & \en@theschool \\
     \bibliography{#2}
   }
 }
+
+\newcommand{\thesisbibliography}{\thesisloadbibliography}
+
 \newcites{accomplish}{\thesisaccomplishtitle}
 
-\newenvironment{thesisaccomplish}{
+\newenvironment{thesistheaccomplish}{
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+  \renewcommand\thesection{\arabic{section}}
+  \setcounter{section}{0}
   \nociteaccomplish{*}
   \renewcommand{\bibname}{\thesisaccomplishtitle}
   \begin{thebibliography}{lo}
   \interlinepenalty=10000
+  \setlength{\itemsep}{0bp}\setlength{\parskip}{0pt}
   \begin{spacing}{1.667}
   \thispagestyle{fancy}
   \small
 }{
-  \end{spacing}\end{thebibliography}
+  \end{spacing}
+  \end{thebibliography}
   \renewcommand{\bibname}{\thesisbibname}
 }
 
@@ -987,6 +1041,8 @@ School: & \en@theschool \\
   \end{spacing}
   \renewcommand{\bibname}{\thesisbibname}
 }
+
+\newcommand{\thesisaccomplish}{\thesisloadaccomplish}
 
 \newtheoremstyle{dotless}{0pt}{0pt}{\normalfont}{24pt}{\strong}{}{ }{}
 \theoremstyle{dotless}

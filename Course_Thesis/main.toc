@@ -1,0 +1,49 @@
+ \cftsetpnumwidth {\widthof {I}-1pt} 
+ \cftsetpnumwidth {\widthof {II}-1pt} 
+ \cftsetpnumwidth {\widthof {III}-1pt} 
+ \cftsetpnumwidth {\widthof {1}-1pt} 
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\numberline {第一章}绪论}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}研究工作的背景与意义}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}时域积分方程方法的国内外研究历史与现状}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}本文的主要贡献与创新}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}本论文的结构安排}{1}{section.1.4}%
+ \cftsetpnumwidth {\widthof {2}-1pt} 
+\contentsline {chapter}{\numberline {第二章}时域积分方程基础}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}时域积分方程的类型}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}空间基函数与时间基函数}{2}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}空间基函数}{2}{subsection.2.2.1}%
+ \cftsetpnumwidth {\widthof {3}-1pt} 
+\contentsline {subsection}{\numberline {2.2.2}时间基函数}{3}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}时域方法特有的展开函数}{3}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}频域方法特有的展开函数}{3}{subsubsection.2.2.2.2}%
+\contentsline {section}{\numberline {2.3}入射波}{3}{section.2.3}%
+ \cftsetpnumwidth {\widthof {4}-1pt} 
+\contentsline {section}{\numberline {2.4}本章小结}{4}{section.2.4}%
+ \cftsetpnumwidth {\widthof {5}-1pt} 
+\contentsline {chapter}{\numberline {第三章}时域积分方程数值方法研究}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}时域积分方程时间步进算法的阻抗元素精确计算}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}时域积分方程时间步进算法产生的阻抗矩阵的特征}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}数值算例与分析}{5}{subsection.3.1.2}%
+ \cftsetpnumwidth {\widthof {6}-1pt} 
+\contentsline {section}{\numberline {3.2}时域积分方程时间步进算法矩阵方程的求解}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}本章小结}{6}{section.3.3}%
+ \cftsetpnumwidth {\widthof {7}-1pt} 
+\contentsline {chapter}{\numberline {第四章}时域积分方程数值方法研究}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}时域积分方程时间步进算法的阻抗元素精确计算}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}时域积分方程时间步进算法阻抗矩阵的存储}{7}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}时域积分方程时间步进算法产生的阻抗矩阵的特征}{7}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}数值算例与分析}{7}{subsection.4.2.2}%
+ \cftsetpnumwidth {\widthof {8}-1pt} 
+\contentsline {section}{\numberline {4.3}时域积分方程时间步进算法矩阵方程的求解}{8}{section.4.3}%
+\contentsline {section}{\numberline {4.4}本章小结}{8}{section.4.4}%
+ \cftsetpnumwidth {\widthof {9}-1pt} 
+\contentsline {chapter}{\numberline {第五章}全文总结与展望}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}全文总结}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}后续工作展望}{9}{section.5.2}%
+ \cftsetpnumwidth {\widthof {10}-1pt} 
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{参考文献}{10}{appendix*.7}%
+ \cftsetpnumwidth {\widthof {11}-1pt} 
+\contentsline {chapter}{\numberline {附录A}中心极限定理的证明}{11}{appendix.A}%
+\contentsline {section}{\numberline {A.1}高斯分布和伯努利实验}{11}{section.A.1}%

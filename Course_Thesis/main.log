@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.4.27)  25 MAY 2020 17:09
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.4.27)  5 JUN 2020 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -692,35 +692,35 @@ text;"
 \symLatin:m:it=\mathgroup8
 \symGreek:m:n=\mathgroup9
 \symGreek:m:it=\mathgroup10
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 49.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
 (Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/bx/n on
- input line 49.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 49.
+ input line 54.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/lmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
- 49.
+ 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/lmr/bx/it --> TU/TimesNewRoman(0)/m/it on input lin
-e 49.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 49.
+e 54.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/lmr/bx/n --> TU/TimesNewRoman(0)/bx/n on input line
- 49.
+ 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/TimesNewRoman(0)/bx/n on input line
- 49.
+ 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/TimesNewRoman(0)/m/it --> TU/TimesNewRoman(0)/bx/it 
-on input line 49.
+on input line 54.
 \symOperators:m:n=\mathgroup11
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 68.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/bx/n --> TU/TimesNewRoman(0)/bx/it 
-on input line 68.
+(Font)                  TU/TimesNewRoman(0)/bx/n --> TU/TimesNewRoman(0)/b/it o
+n input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/bx/n --> TU/TimesNewRoman(0)/bx/it 
-on input line 68.
+(Font)                  TU/TimesNewRoman(0)/bx/n --> TU/TimesNewRoman(0)/b/it o
+n input line 73.
 
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/zhnumber/zhnumber.sty
 Package: zhnumber 2019/04/07 v2.7 Typesetting numbers with Chinese glyphs
@@ -868,7 +868,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip80
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 84.
+Package hyperref Info: Option `colorlinks' set `true' on input line 90.
 
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
@@ -1151,45 +1151,40 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
 \c@pseudopage=\count361
-\glswrite=\write4
-\glo@main@file=\write5
-\openout5 = `main.glo'.
-
-Package glossaries Info: Writing glossary file main.glo on input line 537.
-\@auxoutaccomplish=\write6
+\@auxoutaccomplish=\write4
  (./accomplish.aux)
-\openout6 = `accomplish.aux'.
+\openout4 = `accomplish.aux'.
 
 \c@theorem=\count362
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
 .
 
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1202,7 +1197,7 @@ Package caption Info: subfigure package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box75
-Package hyperref Info: Link coloring ON on input line 6.
+Package hyperref Info: Link coloring ON on input line 7.
 
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1216,12 +1211,12 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count363
 )
-LaTeX Info: Redefining \ref on input line 6.
-LaTeX Info: Redefining \pageref on input line 6.
-LaTeX Info: Redefining \nameref on input line 6.
+LaTeX Info: Redefining \ref on input line 7.
+LaTeX Info: Redefining \pageref on input line 7.
+LaTeX Info: Redefining \nameref on input line 7.
  (./main.out) (./main.out)
-\@outlinefile=\write7
-\openout7 = `main.out'.
+\@outlinefile=\write5
+\openout5 = `main.out'.
 
 Package newfloat Info: `float' package detected.
 
@@ -1299,129 +1294,120 @@ Package fontspec Info: Font family 'SimHei(1)' created for font 'SimHei' with
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 
-Overfull \hbox (2.0pt too wide) in paragraph at lines 13--14
-[] []
+Overfull \hbox (3.94pt too wide) in paragraph at lines 14--15
+[][]   
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-
- []
-
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <12> not avai
+lable
+(Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on inpu
+t line 15.
 [1
 
-\openout4 = `main.ist'.
 
+] (./main.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+.
 
-]
-Chapter 第一章.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-2.
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-2.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+.
 
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-22.
+5.
 
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-22.
+5.
 
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 22.
+(Font)              <12> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 22.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 22.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
-
+(Font)              <6> on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
 
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
 
 (c:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+))
+\tf@toc=\write6
+\openout6 = `main.toc'.
 
-LaTeX Warning: Citation `wang1999sanwei' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `liuxf2006' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `zhu1973wulixue' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `chen2001hao' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `gu2012lao' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `feng997he' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `xiao2012yi' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `zhong1994zhong' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `clerc2010discrete' on page 2 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `wang1999sanwei' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `zhu1973wulixue' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `gu2012lao' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `feng997he' on page 2 undefined on input line 22.
-
-
-LaTeX Warning: Citation `clerc2010discrete' on page 2 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `xiao2012yi' on page 2 undefined on input line 22.
 
 [2
 
+] [3]
+Chapter 第一章.
+
+LaTeX Warning: Citation `wang1999sanwei' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `liuxf2006' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `zhu1973wulixue' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `chen2001hao' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `gu2012lao' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `feng997he' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `xiao2012yi' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `zhong1994zhong' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `clerc2010discrete' on page 1 undefined on input line 2
+5.
+
+
+LaTeX Warning: Citation `wang1999sanwei' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `zhu1973wulixue' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `gu2012lao' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `feng997he' on page 1 undefined on input line 25.
+
+
+LaTeX Warning: Citation `clerc2010discrete' on page 1 undefined on input line 2
+5.
+
+
+LaTeX Warning: Citation `xiao2012yi' on page 1 undefined on input line 25.
+
+[1
+
 ]
 Chapter 第二章.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/it' in size <12> not ava
-ilable
-(Font)              Font shape `TU/TimesNewRoman(0)/b/it' tried instead on inpu
-t line 44.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/it' in size <8> not avai
-lable
-(Font)              Font shape `TU/TimesNewRoman(0)/b/it' tried instead on inpu
-t line 44.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/it' in size <6> not avai
-lable
-(Font)              Font shape `TU/TimesNewRoman(0)/b/it' tried instead on inpu
-t line 44.
 File: ./pic/pica.pdf Graphic file (type pdf)
 <use ./pic/pica.pdf>
-[3
+[2
 
 ]
 File: ./pic/picb.pdf Graphic file (type pdf)
@@ -1430,76 +1416,59 @@ File: ./pic/picc.pdf Graphic file (type pdf)
 <use ./pic/picc.pdf>
 
 
-LaTeX Warning: Citation `xiao2012yi' on page 4 undefined on input line 94.
+LaTeX Warning: Citation `xiao2012yi' on page 3 undefined on input line 97.
 
-[4] [5]
+[3] [4]
 Chapter 第三章.
-[6
+[5
 
-] [7]
+] [6]
 Chapter 第四章.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 148.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.5> on input line 148.
+(Font)              <10.5> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.34996> on input line 148.
+(Font)              <7.34996> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.25> on input line 148.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/it' in size <10.5> not a
-vailable
-(Font)              Font shape `TU/TimesNewRoman(0)/b/it' tried instead on inpu
-t line 148.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/it' in size <7.34996> no
-t available
-(Font)              Font shape `TU/TimesNewRoman(0)/b/it' tried instead on inpu
-t line 148.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/it' in size <5.25> not a
-vailable
-(Font)              Font shape `TU/TimesNewRoman(0)/b/it' tried instead on inpu
-t line 148.
-[8
+(Font)              <5.25> on input line 151.
+[7
 
 ]
 File: ./pic/picd.pdf Graphic file (type pdf)
 <use ./pic/picd.pdf>
 File: ./pic/pice.pdf Graphic file (type pdf)
 <use ./pic/pice.pdf>
- [9]
+ [8]
 Chapter 第五章.
 No file main.bbl.
-[10
+[9
 
-] [11
+] [10
 
 ]
 附录 附录A.
-
-Package glossaries Warning: No \printglossary or \printglossaries found. 
-(Remove \makeglossaries if you don't want any glossaries.) 
-This document will not have a glossary.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
-[12
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
+[11
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 235.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 238.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F25DC6A4366698A7D613F9BF59634718;2819.
+(rerunfilecheck)             Checksum: 61FC77BF657FC3F9243E4659C6FE3CB4;2856.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 25476 strings out of 479417
- 483795 string characters out of 5879271
- 868533 words of memory out of 5000000
- 42447 multiletter control sequences out of 15000+600000
+ 25484 strings out of 479417
+ 483789 string characters out of 5879271
+ 869653 words of memory out of 5000000
+ 42454 multiletter control sequences out of 15000+600000
  558937 words of font info for 115 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,15n,88p,1010b,536s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (12 pages).
+Output written on main.pdf (14 pages).
