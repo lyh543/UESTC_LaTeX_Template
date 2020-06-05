@@ -793,7 +793,8 @@ School: & \en@theschool \\
 \newcommand{\standardhead}{
   \fancyhf{}
   \ifchinesebook{
-    \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont 电子科技大学\chinesebooktitle}
+    \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont\leftmark}
+    % \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont 电子科技大学\chinesebooktitle}
     \fancyhead[CO]{\fontsize{10.5pt}{12.6pt}\selectfont\leftmark}
   }{
     \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont\nouppercase\display@englishheader}
