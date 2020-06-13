@@ -1,0 +1,52 @@
+% !TEX program = xelatex
+\documentclass{ctexart}
+\usepackage{xeCJK}
+\usepackage{multicol}   % 分栏
+\usepackage{mwe}        % 随机文本
+\usepackage[a4paper, inner=3cm, outer=3cm, top=3cm, bottom=3cm, bindingoffset=0cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{zhnumber}   % 中文日期
+
+\renewcommand\refname{参考文献}
+\renewcommand{\abstractname}{\textbf{\large {摘\quad 要}}} %更改摘要二字的样式
+
+% 页眉控制
+\fancyhead{}
+\fancyhead[HL]{心理学漫谈结课论文}
+\fancyhead[HR]{\zhdate*{2019/1/13}}
+\fancyfoot[FC]{\thepage}
+\setlength{\headsep}{5pt}
+
+\title{大学生“朋友圈嫉妒”的心理分析}
+\date{}
+\author{（电子科技大学 20170003 班，成都，611731）}
+
+\begin{document}
+
+\pagestyle{fancy}
+
+\maketitle
+\thispagestyle{fancy}
+
+{\bfseries 摘要：}随着社交网络渗透到人们生活的方方面面，刷朋友圈似乎已称为大学生生活不可缺少的一部分。在朋友圈中，大学生可以看到和分享自己与好友生活、知识的点点滴滴，如旅游沿途的美景、大快朵颐的没事，精心拍摄的美照等……可是当人们浏览朋友圈时有时会羡慕他人拥有而自己所没有的物质、经历、和受关注程度等，甚至会进而产生嫉妒心理，给自己的生活带来消极的体验、影响自己的社交关系等。本篇称之为“朋友圈嫉妒”，并就其产生的心理原因、影响和解决方法进行了深入分析。
+
+{\bfseries 关键字：}朋友圈；嫉妒；心理分析
+
+\begin{multicols}{2} % 双栏控制
+\section{第一段}
+这里是正文。\lipsum[1]
+
+\section{第二段}
+这里是正文 \lipsum[2]
+\end{multicols}
+
+\begin{thebibliography}{}
+	
+	\bibitem{Li10}
+	Chua, T. H. H., \& Chang, L. (2016). Follow me and like my beautiful selfies: Singapore teenage girls’ engagement in self-presentation and peer comparison on social media. Computers in Human Behavior, 55(Part A), 190–197. https://doi.org/10.1016/j.chb. 2015.09.011. 
+	
+	\bibitem{Zhang10}
+	R. Zhang, and L. Liu, Security Models and Requirements for Healthcare Application Clouds, in: Processing of  Cloud 2010, pp. 268-275, 2010.
+\end{thebibliography}
+
+\end{document}
