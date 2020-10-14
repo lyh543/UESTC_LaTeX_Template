@@ -2,7 +2,8 @@
 \usepackage{xeCJK}    %使用系统字体
 \usepackage{bm}       %粗体
 \usepackage{fancyhdr} %自定义页眉页脚
-\pagestyle{empty}                   %不设置页眉页脚
+%\pagestyle{empty}    % 没有页眉页脚
+\pagestyle{plain}     % 没有页眉，页脚包含一个居中的页码
 \usepackage{amsmath, amsthm, amssymb, amsfonts} %数学公式
 \usepackage[a4paper,left=3cm,right=3cm,top=3.5cm,bottom=3.5cm]{geometry}
 \usepackage{booktabs} %插入表格
@@ -21,6 +22,8 @@
 \defaultfontfeatures{Mapping=tex-text} %如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
 \usepackage[explicit]{titlesec}
 \usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref} % 生成 PDF 书签
+\usepackage{float}
+\usepackage{xifthen} % provides \isempty test
 
 \usepackage{graphicx}
 \graphicspath{{imgs/}}
@@ -101,6 +104,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \CTEXsetup[format={\song\bfseries\zihao{4}},number={\chinese{section}},name={,、~},aftername={},indent={0bp},beforeskip={6bp},afterskip={6bp},format+={\flushleft}]{section}
 \CTEXsetup[format={\Large\bfseries\song\zihao{5}},name={（,）},number={\chinese{subsection}},aftername={},indent={22bp},beforeskip={6bp},afterskip={6bp}]{subsection}
+\CTEXsetup[format={\Large\bfseries\song\zihao{5}},name={,.},aftername={ },indent={28bp},beforeskip={6bp},afterskip={6bp}]{subsubsection}
 \CTEXsetup[number={\chinese{section}},name={附录, ~~ }]{appendix}
 
 
@@ -121,7 +125,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlist[enumerate,1]{itemindent=22bp,listparindent=\parindent,itemsep=0mm,partopsep=.7mm,parsep=0ex,labelsep=1.5mm,topsep=0.7mm}
 \setlist[enumerate,2]{label=\alph*),leftmargin=1.5em}  %二级item设置
-%\setitemize{itemindent=38bp,leftmargin=0bp,itemsep=-0.4ex,listparindent=26bp,partopsep=0bp,parsep=0.5ex,topsep=-0.25ex}
+\setitemize{itemindent=38bp,leftmargin=0bp,itemsep=-0.4ex,listparindent=26bp,partopsep=0bp,parsep=0.5ex,topsep=-0.25ex}
 %\setdescription{itemindent=38bp,leftmargin=0bp,itemsep=-0.4ex,listparindent=26bp,partopsep=0bp,parsep=0.5ex,topsep=-0.25ex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,34 +188,37 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 设置个人信息
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
 \newcommand{\course}[1]{
-	\newcommand{\thisiscourse}{#1}
+	\newcommand{\report@course}{#1}
 }
 \newcommand{\college}[1]{
-	\newcommand{\thisiscollege}{#1}
+	\newcommand{\report@college}{#1}
 }
 \newcommand{\major}[1]{
-	\newcommand{\thisismajor}{#1}
+	\newcommand{\report@major}{#1}
 }
 \newcommand{\studentid}[1]{
-	\newcommand{\thisisstudentid}{#1}
+	\newcommand{\report@studentid}{#1}
 }
-\newcommand{\theauthor}[1]{
-	\newcommand{\thisisauthor}{#1}
-}
+%\newcommand{\theauthor}[1]{
+%	\newcommand{\report@author}{#1}
+%}
 \newcommand{\teacher}[1]{
-	\newcommand{\thisisteacher}{#1}
+	\newcommand{\report@teacher}{#1}
 }
 \newcommand{\thedate}[1]{
-	\newcommand{\thisisdate}{#1}
+	\newcommand{\report@date}{#1}
 }
-
+\makeatother
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 设置 \maketitle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
 \renewcommand{\maketitle}{
+	\thispagestyle{empty}   % 去掉首页页码
 	\begin{titlepage}
 		
 		\begin{figure}[!htbp]
@@ -228,37 +235,44 @@
 		\begin{center}
 			\begin{large}
 				\begin{tabular}{rl}
-					\xiaoerhao{\bfseries\hei{课程名称：}}& \xiaoerhao{\bfseries\hei{\thisiscourse}}\\
+					\xiaoerhao{\bfseries\hei{课程名称：}}& \xiaoerhao{\bfseries\hei{\report@course}}\\
 					\\
-					\xiaoerhao{\bfseries\hei{学\qquad 院：}}& \xiaoerhao{\bfseries\hei{\thisiscollege}}\\
+					\xiaoerhao{\bfseries\hei{学\qquad 院：}}& \xiaoerhao{\bfseries\hei{\report@college}}\\
 					\\
-					\xiaoerhao{\bfseries\hei{专\qquad 业：}}& \xiaoerhao{\bfseries\hei{\thisismajor}}\\
+					\xiaoerhao{\bfseries\hei{专\qquad 业：}}& \xiaoerhao{\bfseries\hei{\report@major}}\\
 					\\
-					\xiaoerhao{\bfseries\hei{学\qquad 号：}}& \xiaoerhao{\bfseries\hei{\thisisstudentid}}\\
+					\xiaoerhao{\bfseries\hei{学\qquad 号：}}& \xiaoerhao{\bfseries\hei{\report@studentid}}\\
 					\\
-					\xiaoerhao{\bfseries\hei{姓\qquad 名：}}& \xiaoerhao{\bfseries\hei{\thisisauthor}}\\
+					\xiaoerhao{\bfseries\hei{姓\qquad 名：}}& \xiaoerhao{\bfseries\hei{\@author}}\\
 					\\
-					\xiaoerhao{\bfseries\hei{指导教师：}}& \xiaoerhao{\bfseries\hei{\thisisteacher}}\\
+					\xiaoerhao{\bfseries\hei{指导教师：}}& \xiaoerhao{\bfseries\hei{\report@teacher}}\\
 					\\
-					\xiaoerhao{\bfseries\hei{日\qquad 期：}}& \xiaoerhao{\bfseries\hei{\thisisdate}}\\
+					\xiaoerhao{\bfseries\hei{日\qquad 期：}}& \xiaoerhao{\bfseries\hei{\report@date}}\\
 				\end{tabular}
 			\end{large}
 		\end{center}
 	\end{titlepage}
+	\newpage
+	\setcounter{page}{1} % 第二页从 1 开始标号
 }
-
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 设置 \chapter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \newcommand{\chapter}[1]{
 	\newpage
-	
-	\part{#1}
+	\ifthenelse{\isempty{#1}}{}{
+		\part{#1}
+	}
 	
 	\centerline{\\[10bp]\erhao{\fzshu{\bfseries 电 ~子 ~科~ 技~ 大~ 学}}}
 	
 	\centerline{\\[20bp]\yihao{\hei{\bfseries 实  ~~~ 验  ~~~ 报  ~~~ 告}}}
 	
-	\centerline{\yihao{\song{\bfseries #1}}}
+	\ifthenelse{\isempty{#1}}{}{
+		\centerline{\yihao{\song{\bfseries #1}}}
+	}
 }
