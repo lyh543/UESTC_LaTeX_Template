@@ -19,6 +19,8 @@
 \usepackage{enumitem}           %调整列举环境
 \usepackage{url}
 \usepackage{fontspec,xunicode}
+\usepackage{tabularx}            % 增强表格
+\usepackage{multirow}            % 多行、多列
 \defaultfontfeatures{Mapping=tex-text} %如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
 \usepackage[explicit]{titlesec}
 \usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref} % 生成 PDF 书签
@@ -38,10 +40,10 @@
 % 图的标题行间距设置
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\bottomcaption}{%
-\setlength{\abovecaptionskip}{6bp}%
-\setlength{\belowcaptionskip}{6bp}%
-\caption}
-
+    \setlength{\abovecaptionskip}{6bp}%
+    \setlength{\belowcaptionskip}{6bp}%
+    \caption
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 字体定义
@@ -178,8 +180,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 设置 \part
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\titleformat{\part}[drop]{}{}{0pt}{}
-\titlespacing*{\part}{0pt}{0pt}{0pt}   % 在正文中隐藏 part
+
+\titleformat{\part}[display]{}{}{0pt}{}
+%\titlespacing*{\part}{0pt}{0pt}{0pt}   % 在正文中隐藏 part
 \makeatletter
 \@addtoreset{section}{part} % 使 section 在 part 后重新标号
 \makeatother
@@ -190,25 +193,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \newcommand{\course}[1]{
-	\newcommand{\report@course}{#1}
+    \newcommand{\report@course}{#1}
 }
 \newcommand{\college}[1]{
-	\newcommand{\report@college}{#1}
+    \newcommand{\report@college}{#1}
 }
 \newcommand{\major}[1]{
-	\newcommand{\report@major}{#1}
+    \newcommand{\report@major}{#1}
 }
 \newcommand{\studentid}[1]{
-	\newcommand{\report@studentid}{#1}
+    \newcommand{\report@studentid}{#1}
 }
 %\newcommand{\theauthor}[1]{
-%	\newcommand{\report@author}{#1}
+%    \newcommand{\report@author}{#1}
 %}
 \newcommand{\teacher}[1]{
-	\newcommand{\report@teacher}{#1}
+    \newcommand{\report@teacher}{#1}
 }
 \newcommand{\thedate}[1]{
-	\newcommand{\report@date}{#1}
+    \newcommand{\report@date}{#1}
 }
 \makeatother
 
@@ -218,42 +221,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \renewcommand{\maketitle}{
-	\thispagestyle{empty}   % 去掉首页页码
-	\begin{titlepage}
-		
-		\begin{figure}[!htbp]
-			\centering
-			\includegraphics[width=\textwidth]{uestc}
-		\end{figure}
-		
-		\center{\xiaochuhao{\kaishu 计算机专业类课程}}
-		\vspace{1.5cm}
-		\center{\fontsize{48bp}{52bp}{\song{\bfseries 实\\验\\报\\告}}}
-		
-		\vspace{1.5cm}
-		
-		\begin{center}
-			\begin{large}
-				\begin{tabular}{rl}
-					\xiaoerhao{\bfseries\hei{课程名称：}}& \xiaoerhao{\bfseries\hei{\report@course}}\\
-					\\
-					\xiaoerhao{\bfseries\hei{学\qquad 院：}}& \xiaoerhao{\bfseries\hei{\report@college}}\\
-					\\
-					\xiaoerhao{\bfseries\hei{专\qquad 业：}}& \xiaoerhao{\bfseries\hei{\report@major}}\\
-					\\
-					\xiaoerhao{\bfseries\hei{学\qquad 号：}}& \xiaoerhao{\bfseries\hei{\report@studentid}}\\
-					\\
-					\xiaoerhao{\bfseries\hei{姓\qquad 名：}}& \xiaoerhao{\bfseries\hei{\@author}}\\
-					\\
-					\xiaoerhao{\bfseries\hei{指导教师：}}& \xiaoerhao{\bfseries\hei{\report@teacher}}\\
-					\\
-					\xiaoerhao{\bfseries\hei{日\qquad 期：}}& \xiaoerhao{\bfseries\hei{\report@date}}\\
-				\end{tabular}
-			\end{large}
-		\end{center}
-	\end{titlepage}
-	\newpage
-	\setcounter{page}{1} % 第二页从 1 开始标号
+    \thispagestyle{empty}   % 去掉首页页码
+    \begin{titlepage}
+        
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[width=\textwidth]{uestc}
+        \end{figure}
+        
+        \center{\xiaochuhao{\kaishu 计算机专业类课程}}
+        \vspace{1.5cm}
+        \center{\fontsize{48bp}{52bp}{\song{\bfseries 实\\验\\报\\告}}}
+        
+        \vspace{1.5cm}
+        
+        \begin{center}
+            \begin{large}
+                \begin{tabular}{rl}
+                    \xiaoerhao{\bfseries\hei{课程名称：}}& \xiaoerhao{\bfseries\hei{\report@course}}\\
+                    \\
+                    \xiaoerhao{\bfseries\hei{学\qquad 院：}}& \xiaoerhao{\bfseries\hei{\report@college}}\\
+                    \\
+                    \xiaoerhao{\bfseries\hei{专\qquad 业：}}& \xiaoerhao{\bfseries\hei{\report@major}}\\
+                    \\
+                    \xiaoerhao{\bfseries\hei{学\qquad 号：}}& \xiaoerhao{\bfseries\hei{\report@studentid}}\\
+                    \\
+                    \xiaoerhao{\bfseries\hei{姓\qquad 名：}}& \xiaoerhao{\bfseries\hei{\@author}}\\
+                    \\
+                    \xiaoerhao{\bfseries\hei{指导教师：}}& \xiaoerhao{\bfseries\hei{\report@teacher}}\\
+                    \\
+                    \xiaoerhao{\bfseries\hei{日\qquad 期：}}& \xiaoerhao{\bfseries\hei{\report@date}}\\
+                \end{tabular}
+            \end{large}
+        \end{center}
+    \end{titlepage}
+    \newpage
+    \setcounter{page}{1} % 第二页从 1 开始标号
 }
 \makeatother
 
@@ -261,18 +264,28 @@
 % 设置 \chapter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\newcommand{\chapter}[1]{
-	\newpage
-	\ifthenelse{\isempty{#1}}{}{
-		\part{#1}
-	}
-	
-	\centerline{\\[10bp]\erhao{\fzshu{\bfseries 电 ~子 ~科~ 技~ 大~ 学}}}
-	
-	\centerline{\\[20bp]\yihao{\hei{\bfseries 实  ~~~ 验  ~~~ 报  ~~~ 告}}}
-	
-	\ifthenelse{\isempty{#1}}{}{
-		\centerline{\yihao{\song{\bfseries #1}}}
-	}
+\makeatletter
+\newcommand{\chapter}[3]{
+    \newpage
+    \part{}
+    
+    \centerline{\\[10bp]\erhao{\fzshu{\bfseries 电 ~子 ~科~ 技~ 大~ 学}}}
+    
+    \centerline{\\[20bp]\yihao{\hei{\bfseries 实  ~~~ 验  ~~~ 报  ~~~ 告}}}
+    
+    \ifthenelse{\isempty{#3}}{
+        \centerline{\yihao{\song{\bfseries #1}}}
+    }{
+        \noindent
+         \begin{tabularx}{\textwidth}{XXX}
+             \Large\bfseries\song\zihao{4}学生姓名：{\@author} &
+             \Large\bfseries\song\zihao{4}学 号：{\report@studentid} &
+             \Large\bfseries\song\zihao{4}指导教师：{\report@teacher} \\
+             \\
+             \Large\bfseries\song\zihao{4}实验地点：{#2} &
+             \multicolumn{2}{l}{\Large\bfseries\song\zihao{4}实验时间：{#3}}
+         \end{tabularx}
+    }
 }
+\makeatother
+

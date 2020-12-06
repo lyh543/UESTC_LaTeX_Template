@@ -1,11 +1,13 @@
 # 电子科技大学计算机学院实验报告 LaTeX 模板
 
-本模板基于[heywrcoding/UESTC_Lab_Report_LaTeX_Template](https://github.com/heywrcoding/UESTC_Lab_Report_LaTeX_Template/)，参考[标准实验报告_模板.doc]修改，修改之处见[文末](#修改)。
+本模板基于[heywrcoding/UESTC_Lab_Report_LaTeX_Template]，参考[标准实验报告_模板.doc]和[实验报告模版.doc]修改。
 
 [LaTeX 模板] | [预览 pdf]
 
+[heywrcoding/UESTC_Lab_Report_LaTeX_Template]: https://github.com/heywrcoding/UESTC_Lab_Report_LaTeX_Template/
 [LaTeX 模板]: main.tex
 [标准实验报告_模板.doc]: 标准实验报告_模板.doc
+[实验报告模版.doc]: 实验报告模版.doc
 [预览 pdf]: main.pdf
 
 ## 简易的使用手册
@@ -78,8 +80,6 @@
 \end{figure}
 ```
 
-## 修改
+## 已知 bug
 
-1. 定义 `AutoFakeBold`，使用全局伪粗体，应对某些字体无法粗体的 bug。
-2. 引入了方正舒体 `\fzshu`。
-3. 针对电子科技大学计算机学院的实验报告模板对 section 的名称和顺序、字体、页脚和其他一些细节进行了修改。
+1. 分实验的标题（电子科技大学 实验报告 实验X）上方存在大量空白。

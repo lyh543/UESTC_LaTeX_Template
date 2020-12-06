@@ -18,8 +18,9 @@
 
 \maketitle
 
-%\chapter{}       % 实验报告不分次
-\chapter{实验一} % 多次实验分次写到一个文档中
+% 下面两行可根据模板不同选择一行使用，将另一行注释掉即可
+\chapter{实验一}{}{}                                      % 用于单次实验报告开头的 “实验X”
+%\chapter{实验一}{XX实验室}{2020 年 10 月 11 日}           % 实验信息
 
 \section{实验室名称：}
 电子科技大学清水河校区主楼A2-412
@@ -59,18 +60,18 @@ LaTeX 的应用
 \begin{enumerate}
   \item 关键流程分析
   \begin{enumerate}
-  	\item 第一步
-  	\begin{enumerate}
-  		\item 第一小点
-  		\item 第二小点
-  		\item 第三小点
-  		\begin{itemize}
-  			\item 1
-  			\item 2
-  		\end{itemize}
-  	\end{enumerate}
-  	\item 第二步
-  	\item 第三步
+      \item 第一步
+      \begin{enumerate}
+          \item 第一小点
+          \item 第二小点
+          \item 第三小点
+          \begin{itemize}
+              \item 1
+              \item 2
+          \end{itemize}
+      \end{enumerate}
+      \item 第二步
+      \item 第三步
   \end{enumerate}
   \item 实验结果 \\ 文字描述或者截图（所作的图）。必须有截图，截图数量不少于2幅。
   \item 结果分析 \\ 对每一个结果，必须有相应分析，如解释图表反映的内涵、缘由，是否达到预期目标，是否可改进等等。\\
@@ -96,7 +97,8 @@ LaTeX 的应用
 \end{tabular}
 \end{flushright}
 
-\chapter{实验二}
+%\chapter{实验二}{}{}                                    % 用于单次实验报告开头的 “实验X”
+\chapter{实验二}{XX实验室}{2020 年 10 月 11 日}           % 实验信息
 
 \section{实验室名称：}
 电子科技大学清水河校区主楼A2-412
@@ -134,23 +136,23 @@ LaTeX 的应用
 
 自行填写。每个实验项目的格式范例：
 \begin{enumerate}
-	\item 关键流程分析
-	\begin{enumerate}
-		\item 第一步
-		\begin{enumerate}
-			\item 第一小点
-			\item 第二小点
-			\item 第三小点
-			\begin{itemize}
-				\item 1
-				\item 2
-			\end{itemize}
-		\end{enumerate}
-		\item 第二步
-		\item 第三步
-	\end{enumerate}
-	\item 实验结果 \\ 文字描述或者截图（所作的图）。必须有截图，截图数量不少于2幅。
-	\item 结果分析 \\ 对每一个结果，必须有相应分析，如解释图表反映的内涵、缘由，是否达到预期目标，是否可改进等等。\\
+    \item 关键流程分析
+    \begin{enumerate}
+        \item 第一步
+        \begin{enumerate}
+            \item 第一小点
+            \item 第二小点
+            \item 第三小点
+            \begin{itemize}
+                \item 1
+                \item 2
+            \end{itemize}
+        \end{enumerate}
+        \item 第二步
+        \item 第三步
+    \end{enumerate}
+    \item 实验结果 \\ 文字描述或者截图（所作的图）。必须有截图，截图数量不少于2幅。
+    \item 结果分析 \\ 对每一个结果，必须有相应分析，如解释图表反映的内涵、缘由，是否达到预期目标，是否可改进等等。\\
 \end{enumerate}
 
 
@@ -167,10 +169,10 @@ LaTeX 的应用
 
 \vspace{4cm}
 \begin{flushright}
-	\begin{tabular}{lc}
-		\sihao{\hei{报告评分：}}& \sihao{\song{X~X~X}}\\
-		\sihao{\hei{指导教师签字：}}& \sihao{\song{X~X~X}}\\
-	\end{tabular}
+    \begin{tabular}{lc}
+        \sihao{\hei{报告评分：}}& \sihao{\song{X~X~X}}\\
+        \sihao{\hei{指导教师签字：}}& \sihao{\song{X~X~X}}\\
+    \end{tabular}
 \end{flushright}
 
 
@@ -192,11 +194,11 @@ int main (int argc, char *argv[]){
 \caption{一个简单的表格}\label{tab1}
   \centering
   \begin{tabular}{|l|c|c|}
-	\hline
-	功能          &WEB         &APP         \\ \hline
-	注册          &$\surd$     &$\surd$     \\ \hline
-	登录          &$\surd$     &$\surd$     \\ \hline
-	推送          &$\times$    &$\surd$     \\ \hline
+    \hline
+    功能          &WEB         &APP         \\ \hline
+    注册          &$\surd$     &$\surd$     \\ \hline
+    登录          &$\surd$     &$\surd$     \\ \hline
+    推送          &$\times$    &$\surd$     \\ \hline
 \end{tabular}
 \end{table}
 
