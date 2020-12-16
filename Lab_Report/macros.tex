@@ -277,14 +277,17 @@
         \centerline{\yihao{\song{\bfseries #1}}}
     }{
         \noindent
-         \begin{tabularx}{\textwidth}{XXX}
-             \Large\bfseries\song\zihao{4}学生姓名：{\@author} &
-             \Large\bfseries\song\zihao{4}学 号：{\report@studentid} &
-             \Large\bfseries\song\zihao{4}指导教师：{\report@teacher} \\
-             \\
-             \Large\bfseries\song\zihao{4}实验地点：{#2} &
-             \multicolumn{2}{l}{\Large\bfseries\song\zihao{4}实验时间：{#3}}
-         \end{tabularx}
+        \begin{tabularx}{\textwidth}{XXX}
+            \Large\bfseries\song\zihao{4}学生姓名：{\@author} &
+            \Large\bfseries\song\zihao{4}学 号：{\report@studentid} &
+            \Large\bfseries\song\zihao{4}指导教师：{\report@teacher}
+        \end{tabularx}\\
+        
+        \noindent
+        \begin{tabularx}{\textwidth}{XX}
+            \Large\bfseries\song\zihao{4}实验地点：{#2} &
+            \Large\bfseries\song\zihao{4}实验时间：{#3}
+        \end{tabularx}
     }
 }
 \makeatother
