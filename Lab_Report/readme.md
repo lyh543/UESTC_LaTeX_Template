@@ -1,14 +1,18 @@
 # 电子科技大学计算机学院实验报告 LaTeX 模板
 
-本模板基于[heywrcoding/UESTC_Lab_Report_LaTeX_Template]，参考[标准实验报告_模板.doc]和[实验报告模版.doc]修改。
+本模板基于[heywrcoding/UESTC_Lab_Report_LaTeX_Template]，参考[标准实验报告.doc]和[标准实验报告_multipart.doc]修改。
 
-[LaTeX 模板] | [预览 pdf]
+## 说明
+
+计院模板千千万，其实也就是两个风格：**多次实验的内容合并为一个报告来写（[标准实验报告.doc]），或者每次实验写一个报告并标注明显的实验X （[标准实验报告_multipart.doc]）**。
+
+对于这两个风格，可以分别使用 [main.pdf] 或 [main_multipart.pdf] 来完成。
 
 [heywrcoding/UESTC_Lab_Report_LaTeX_Template]: https://github.com/heywrcoding/UESTC_Lab_Report_LaTeX_Template/
-[LaTeX 模板]: main.tex
-[标准实验报告_模板.doc]: 标准实验报告_模板.doc
-[实验报告模版.doc]: 实验报告模版.doc
-[预览 pdf]: main.pdf
+[标准实验报告.doc]: 标准实验报告.doc
+[标准实验报告_multipart.doc]: 标准实验报告_multipart.doc
+[main.pdf]: main.pdf
+[main_multipart.pdf]:main_multipart.pdf
 
 ## 简易的使用手册
 
@@ -82,4 +86,4 @@
 
 ## 已知 bug
 
-1. 分实验的标题（电子科技大学 实验报告 实验X）上方存在大量空白。
+1. [main_multipart.tex] 的标题（电子科技大学 实验报告 实验X）上方存在大量空白。
