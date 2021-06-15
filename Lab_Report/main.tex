@@ -102,7 +102,9 @@ LaTeX 的应用
 
 \section{代码示例}
 
-\begin{lstlisting}[caption={一段C代码},captionpos=b]
+示例代码如代码 \ref{lst:code-example} 所示。
+
+\begin{lstlisting}[caption={一段C代码}, label={lst:code-example}, captionpos=t, language=c]
 #include <stdio.h>
 int main (int argc, char *argv[]){
   printf("Hello world!");
@@ -110,8 +112,11 @@ int main (int argc, char *argv[]){
 \end{lstlisting}
 
 \section{表格示例}
+
+示例表格如表 \ref{tab:tab1} 所示。
+
 \begin{table}[!h!tbp]
-\caption{一个简单的表格}\label{tab1}
+\caption{一个简单的表格}\label{tab:tab1}
   \centering
   \begin{tabular}{|l|c|c|}
     \hline
