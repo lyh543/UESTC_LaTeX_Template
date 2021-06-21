@@ -9,6 +9,7 @@
 \usepackage{booktabs} %插入表格
 \usepackage[section]{placeins} %避免浮动
 \usepackage{listings} %插入代码
+\usepackage{underscore} % 在非数学环境下不再需要转义 '_'
 \usepackage{ctex}     %中文宏包
 \usepackage[svgnames, table]{xcolor} %彩色表格
 \usepackage{algorithm}          %伪代码
@@ -57,9 +58,9 @@
 \setCJKfamilyfont{song}{SimSun}                             %宋体 song
 \newcommand{\song}{\CJKfamily{song}}
 \setCJKfamilyfont{fs}{FangSong}                      %仿宋  fs
-\newcommand{\fs}{\CJKfamily{fs}} 
+\newcommand{\fs}{\CJKfamily{fs}}
 \let\kaishu\relax                                    %重定义楷体，打开假粗体
-\newCJKfontfamily\kaishu{KaiTi}[AutoFakeBold] 
+\newCJKfontfamily\kaishu{KaiTi}[AutoFakeBold]
 %\setCJKfamilyfont{ktgb}{KaiTi_GB2312}                      %楷体 GB2312
 %\newcommand{\ktgb}{\CJKfamily{ktgb}}
 \setCJKfamilyfont{yh}{Microsoft YaHei}                    %微软雅黑 yh
@@ -224,18 +225,18 @@
 \renewcommand{\maketitle}{
     \thispagestyle{empty}   % 去掉首页页码
     \begin{titlepage}
-        
+
         \begin{figure}[!htbp]
             \centering
             \includegraphics[width=\textwidth]{uestc}
         \end{figure}
-        
+
         \center{\xiaochuhao{\kaishu 计算机专业类课程}}
         \vspace{1.5cm}
         \center{\fontsize{48bp}{52bp}{\song{\bfseries 实\\验\\报\\告}}}
-        
+
         \vspace{1.5cm}
-        
+
         \begin{center}
             \begin{large}
                 \begin{tabular}{rl}
@@ -269,11 +270,11 @@
 \newcommand{\chapter}[3]{
     \newpage
     \part{}
-    
+
     \centerline{\\[10bp]\erhao{\fzshu{\bfseries 电 ~子 ~科~ 技~ 大~ 学}}}
-    
+
     \centerline{\\[20bp]\yihao{\hei{\bfseries 实  ~~~ 验  ~~~ 报  ~~~ 告}}}
-    
+
     \ifthenelse{\isempty{#3}}{
         \centerline{\yihao{\song{\bfseries #1}}}
     }{
@@ -283,7 +284,7 @@
             \Large\bfseries\song\zihao{4}学 号：{\report@studentid} &
             \Large\bfseries\song\zihao{4}指导教师：{\report@teacher}
         \end{tabularx}\\
-        
+
         \noindent
         \begin{tabularx}{\textwidth}{XX}
             \Large\bfseries\song\zihao{4}实验地点：{#2} &
