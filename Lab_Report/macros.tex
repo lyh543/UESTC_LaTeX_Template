@@ -240,19 +240,19 @@
         \begin{center}
             \begin{large}
                 \begin{tabular}{rl}
-                    \xiaoerhao{\bfseries\hei{课程名称：}}& \xiaoerhao{\bfseries\hei{\report@course}}\\
+                    \xiaoerhao{\bfseries\fs{课程名称：}}& \xiaoerhao{\bfseries\hei{\report@course}}\\
                     \\
-                    \xiaoerhao{\bfseries\hei{学\qquad 院：}}& \xiaoerhao{\bfseries\hei{\report@college}}\\
+                    \xiaoerhao{\bfseries\fs{学\qquad 院：}}& \xiaoerhao{\bfseries\hei{\report@college}}\\
                     \\
-                    \xiaoerhao{\bfseries\hei{专\qquad 业：}}& \xiaoerhao{\bfseries\hei{\report@major}}\\
+                    \xiaoerhao{\bfseries\fs{学院专业：}}& \xiaoerhao{\bfseries\hei{\report@major}}\\
                     \\
-                    \xiaoerhao{\bfseries\hei{学\qquad 号：}}& \xiaoerhao{\bfseries\hei{\report@studentid}}\\
+                    \xiaoerhao{\bfseries\fs{学\qquad 号：}}& \xiaoerhao{\bfseries\hei{\report@studentid}}\\
                     \\
-                    \xiaoerhao{\bfseries\hei{姓\qquad 名：}}& \xiaoerhao{\bfseries\hei{\@author}}\\
+                    \xiaoerhao{\bfseries\fs{学生姓名：}}& \xiaoerhao{\bfseries\hei{\@author}}\\
                     \\
-                    \xiaoerhao{\bfseries\hei{指导教师：}}& \xiaoerhao{\bfseries\hei{\report@teacher}}\\
+                    \xiaoerhao{\bfseries\fs{指导教师：}}& \xiaoerhao{\bfseries\hei{\report@teacher}}\\
                     \\
-                    \xiaoerhao{\bfseries\hei{日\qquad 期：}}& \xiaoerhao{\bfseries\hei{\report@date}}\\
+                    \xiaoerhao{\bfseries\fs{日\qquad 期：}}& \xiaoerhao{\bfseries\hei{\report@date}}\\
                 \end{tabular}
             \end{large}
         \end{center}
@@ -270,13 +270,13 @@
 \newcommand{\chapter}[3]{
     \newpage
     \part{}
-
-    \centerline{\\[10bp]\erhao{\fzshu{\bfseries 电 ~子 ~科~ 技~ 大~ 学}}}
-
+    \vspace*{-120bp} % Adjust the vertical space here
+    \centerline{\\[40bp]\erhao{\fzshu{\bfseries 电 ~子 ~科~ 技~ 大~ 学}}}
+    \vspace*{-20bp} % Adjust the vertical space her
     \centerline{\\[20bp]\yihao{\hei{\bfseries 实  ~~~ 验  ~~~ 报  ~~~ 告}}}
 
     \ifthenelse{\isempty{#3}}{
-        \centerline{\yihao{\song{\bfseries #1}}}
+        \centerline{\\[20bp]\yihao{\song{\bfseries #1}}}
     }{
         \noindent
         \begin{tabularx}{\textwidth}{XXX}
